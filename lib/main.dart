@@ -84,6 +84,45 @@ class ProfileCard extends StatelessWidget {
                 height: 1.5,
               ),
             ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    // Handle email action
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Email: john.doe@example.com')),
+                    );
+                  },
+                  icon: const Icon(Icons.email),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+                IconButton(
+                  onPressed: () {
+                    // Handle LinkedIn action
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('LinkedIn: linkedin.com/in/johndoe')),
+                    );
+                  },
+                  icon: const Icon(Icons.business),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+                IconButton(
+                  onPressed: () {
+                    // Handle phone action
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Phone: +1 (555) 123-4567')),
+                    );
+                  },
+                  icon: const Icon(Icons.phone),
+                  iconSize: 30,
+                  color: Colors.blue,
+                ),
+              ],
+            ),
           ],
         ),
       ),
