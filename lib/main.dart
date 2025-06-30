@@ -75,6 +75,15 @@ class ProfileCard extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
+            const SizedBox(height: 16),
+            const Text(
+              'Passionate mobile developer with 3+ years of experience in creating beautiful and functional Flutter applications. Love clean code and great user experiences.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14,
+                height: 1.5,
+              ),
+            ),
           ],
         ),
       ),
