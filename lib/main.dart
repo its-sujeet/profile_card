@@ -115,7 +115,7 @@ class ProfileCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'John Doe',
+              'Arjun Kumar Sharma',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -131,7 +131,7 @@ class ProfileCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'Passionate mobile developer with 3+ years of experience in creating beautiful and functional Flutter applications. Love clean code and great user experiences.',
+              'Passionate mobile developer from India with 3+ years of experience in creating beautiful Flutter applications. Love building apps that solve real-world problems and make a positive impact.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
@@ -146,7 +146,7 @@ class ProfileCard extends StatelessWidget {
                   onPressed: () {
                     // Handle email action
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Email: john.doe@example.com')),
+                      const SnackBar(content: Text('Email: arjun.sharma@gmail.com')),
                     );
                   },
                   icon: const Icon(Icons.email),
@@ -157,7 +157,7 @@ class ProfileCard extends StatelessWidget {
                   onPressed: () {
                     // Handle LinkedIn action
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('LinkedIn: linkedin.com/in/johndoe')),
+                      const SnackBar(content: Text('LinkedIn: linkedin.com/in/arjunsharma')),
                     );
                   },
                   icon: const Icon(Icons.business),
@@ -168,7 +168,7 @@ class ProfileCard extends StatelessWidget {
                   onPressed: () {
                     // Handle phone action
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Phone: +1 (555) 123-4567')),
+                      const SnackBar(content: Text('Phone: +91 98765 43210')),
                     );
                   },
                   icon: const Icon(Icons.phone),
@@ -182,7 +182,7 @@ class ProfileCard extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.location_on, color: Colors.blue),
               title: const Text('Location'),
-              subtitle: const Text('San Francisco, CA'),
+              subtitle: const Text('Bangalore, Karnataka, India'),
               dense: true,
             ),
             ListTile(
@@ -194,7 +194,7 @@ class ProfileCard extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.school, color: Colors.blue),
               title: const Text('Education'),
-              subtitle: const Text('Computer Science, Stanford University'),
+              subtitle: const Text('B.Tech CSE, IIT Bangalore'),
               dense: true,
             ),
           ],
