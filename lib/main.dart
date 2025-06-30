@@ -26,12 +26,66 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile Card'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: const Center(
-        child: ProfileCard(),
+      body: Stack(
+        children: [
+          // Background image
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFF1E88E5),
+                  Color(0xFF42A5F5),
+                  Color(0xFF90CAF9),
+                ],
+              ),
+            ),
+          ),
+          // Overlay pattern
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.1),
+            ),
+          ),
+          // App bar overlay
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_back, color: Colors.white),
+                  ),
+                  const Expanded(
+                    child: Text(
+                      'Profile Card',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.more_vert, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Profile card content
+          const Center(
+            child: ProfileCard(),
+          ),
+        ],
       ),
     );
   }
@@ -122,6 +176,26 @@ class ProfileCard extends StatelessWidget {
                   color: Colors.blue,
                 ),
               ],
+            ),
+            const SizedBox(height: 16),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.location_on, color: Colors.blue),
+              title: const Text('Location'),
+              subtitle: const Text('San Francisco, CA'),
+              dense: true,
+            ),
+            ListTile(
+              leading: const Icon(Icons.work, color: Colors.blue),
+              title: const Text('Experience'),
+              subtitle: const Text('3+ years in Flutter Development'),
+              dense: true,
+            ),
+            ListTile(
+              leading: const Icon(Icons.school, color: Colors.blue),
+              title: const Text('Education'),
+              subtitle: const Text('Computer Science, Stanford University'),
+              dense: true,
             ),
           ],
         ),
